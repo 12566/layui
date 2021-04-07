@@ -1,130 +1,142 @@
- 
- 
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>layui</title>
-<link rel="stylesheet" href="src/css/layui.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>layui</title>
+  <link rel="stylesheet" href="src/css/layui.css">
+  <style>
+    .logo{
+      color: #ffffff;
+      font-size: 30px;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="layui-layout layui-layout-admin">
-  <div class="layui-header">
-    <div class="layui-logo">
-      <a class="logo" href="/">
-        layui
-      </a>
-    </div>
-    <!-- 头部区域（可配合layui 已有的水平导航） -->
-    <ul class="layui-nav layui-layout-left">
-      <li class="layui-nav-item"><a href="">nav 1</a></li>
-      <li class="layui-nav-item"><a href="">nav 2</a></li>
-      <li class="layui-nav-item"><a href="">nav 3</a></li>
-      <li class="layui-nav-item">
-        <a href="javascript:;">nav groups</a>
-        <dl class="layui-nav-child">
-          <dd><a href="laydate.html">laydate</a></dd>
-          <dd><a href="layedit.html">layedit</a></dd>
-          <dd><a href="layer.html">layer</a></dd>
-        </dl>
-      </li>
-    </ul>
-    <ul class="layui-nav layui-layout-right">
-      <li class="layui-nav-item">
-        <a href="javascript:;">
-          <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" class="layui-nav-img">
-          tester
+  <div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+      <div class="layui-logo">
+        <a class="logo" href="/">
+          layui
         </a>
-        <dl class="layui-nav-child">
-          <dd><a href="">set 1</a></dd>
-          <dd><a href="">set 2</a></dd>
-        </dl>
-      </li>
-      <li class="layui-nav-item"><a href="">Sign out</a></li>
-    </ul>
-  </div>
-  
-  <div class="layui-side layui-bg-black">
-    <div class="layui-side-scroll">
-      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-      <ul class="layui-nav layui-nav-tree" lay-filter="test">
-        <li class="layui-nav-item layui-nav-itemed">
-          <a class="" href="javascript:;">menu group 1</a>
-          <dl class="layui-nav-child">
-            <dd><a href="table.html">table</a></dd>
-            <dd><a href="temp.html">temp</a></dd>
-            <dd><a href="transfer.html">transfer</a></dd>
-            <dd><a href="tree.html">tree</a></dd>
-          </dl>
-        </li>
+      </div>
+      <!-- 头部区域（可配合layui 已有的水平导航） -->
+      <ul class="layui-nav layui-layout-left">
+        <li class="layui-nav-item" type="nav(demo)"><a href="">nav 1</a></li>
+        <li class="layui-nav-item"><a href="">nav 2</a></li>
+        <li class="layui-nav-item"><a href="">nav 3</a></li>
         <li class="layui-nav-item">
-          <a href="javascript:;">menu group 2</a>
+          <a href="javascript:;">nav groups</a>
           <dl class="layui-nav-child">
-            <dd><a href="javascript:;">list 1</a></dd>
-            <dd><a href="javascript:;">list 2</a></dd>
-            <dd><a href="">超链接</a></dd>
+            <dd><a href="laydate.html">laydate</a></dd>
+            <dd><a href="layedit.html">layedit</a></dd>
+            <dd><a href="layer.html">layer</a></dd>
           </dl>
         </li>
-        <li class="layui-nav-item"><a href="javascript:;">click menu item</a></li>
-        <li class="layui-nav-item"><a href="">the links</a></li>
+      </ul>
+      <ul class="layui-nav layui-layout-right">
+        <li class="layui-nav-item">
+          <a href="javascript:;">
+            <img src="src/image/photo3.jpg" class="layui-nav-img">
+            是奶酪啊
+
+          </a>
+          <dl class="layui-nav-child">
+            <dd><a class="layui-btn site-demo-active" data-type="tabAdd">个人资料</a></dd>
+            <dd><a href="">set 2</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">登出</a></li>
       </ul>
     </div>
-  </div>
-  
-  <div class="layui-body">
-    <!-- 内容主体区域 -->
-    <div style="padding: 15px;">
-      内容主体区域
-      
-      <!-- <br><br> -->
-      
-      <!-- <blockquote class="layui-elem-quote layui-text">
-        <ul>
-          <li>
-            你也可以单独打开管理界面大布局的演示页面：
-            <a class="layui-btn layui-btn-normal" href="layuiAdmin.html" target="_blank">单独打开</a>
+
+    <div class="layui-side layui-bg-black">
+      <div class="layui-side-scroll">
+        <ul class="layui-nav layui-nav-tree layui-inline" lay-filter="demo" style="margin-right: 10px;">
+          <li class="layui-nav-item layui-nav-itemed">
+            <a href="javascript:;">默认展开</a>
+            <dl class="layui-nav-child">
+              <dd><a href="javascript:;">选项一</a></dd>
+              <dd><a href="javascript:;">选项二</a></dd>
+              <dd><a href="javascript:;">选项三</a></dd>
+              <dd><a href="javascript:;">跳转项</a></dd>
+            </dl>
           </li>
-          <li>
-            该页面只是简单的管理系统的界面基础布局示例，并不是一整套界面布局方案，您可以关注基于 layui 的通用型管理系统界面模板解决方案：
-            <a href="https://www.layui.com/layuiadmin/" target="_blank" class="layui-btn">layuiAdmin</a>
+          <li class="layui-nav-item">
+            <a href="javascript:;">解决方案</a>
+            <dl class="layui-nav-child">
+              <dd><a href="">移动模块</a></dd>
+              <dd><a href="">后台模版</a></dd>
+              <dd><a href="">电商平台</a></dd>
+            </dl>
           </li>
-          <li>
-            layui 之所以赢得如此多人的青睐，更多是在于它“前后界面兼备”的能力。既可编织出绚丽的前台页面，又可满足繁杂的管理系统的界面需求。
-            <br>layui 管理基本布局， 致力于让每一位开发者都能轻松搭建自己的管理系统模板。
-          </li>
+          <li class="layui-nav-item"><a href="javascript:;">云市场</a></li>
+          <li class="layui-nav-item"><a href="javascript:;">社区</a></li>
         </ul>
-      </blockquote> -->
-      
-      <br>
-      
-      <div class="layui-card layui-panel">
-        <div class="layui-card-header">
-          下面是充数内容，为的是出现滚动条
-        </div>
-        <div class="layui-card-body">
-        充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>充数内容<br>你还真划到了底部呀
+      </div>
+    </div>
+
+    <div class="layui-body">
+      <div class="layui-tab" lay-filter="demo" lay-allowclose="true">
+        <ul class="layui-tab-title">
+
+        </ul>
+        <div class="layui-tab-content">
+
         </div>
       </div>
-      <br><br>
-      
+
+    </div>
+
+    <div class="layui-footer">
+      <!-- 底部固定区域 -->
+      底部固定区域
     </div>
   </div>
-  
-  <div class="layui-footer">
-    <!-- 底部固定区域 -->
-    底部固定区域
-  </div>
-</div>
 
-<script src="../src/layui.js"></script>
-<script>
-//JavaScript代码区域
-layui.use('element', function(){
-  var element = layui.element;
-  
-});
-</script>
+  <script src="src/layui.js"></script>
+  <script>
+    layui.use('element', function () {
+      var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+
+      //监听导航点击
+      element.on('nav(demo)', function (elem) {
+        //console.log(elem)
+        layer.msg(elem.text());
+      });
+
+      var $ = layui.jquery; //Tab的切换功能，切换事件监听等，需要依赖element模块
+
+      //触发事件
+      var active = {
+        tabAdd: function () {
+          //新增一个Tab项
+          element.tabAdd('demo', {
+            title: '新选项' + (Math.random() * 1000 | 0) //用于演示
+            , content: '内容' + (Math.random() * 1000 | 0)
+            , id: new Date().getTime() //实际使用一般是规定好的id，这里以时间戳模拟下
+          })
+        }
+        , tabDelete: function (othis) {
+          //删除指定Tab项
+          element.tabDelete('demo', '44'); //删除：“商品管理”
+
+
+          othis.addClass('layui-btn-disabled');
+        }
+        , tabChange: function () {
+          //切换到指定Tab项
+          element.tabChange('demo', '22'); //切换到：用户管理
+        }
+      };
+
+
+
+    });
+  </script>
 </body>
+
 </html>
