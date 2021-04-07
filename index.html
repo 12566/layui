@@ -41,8 +41,7 @@
         <li class="layui-nav-item">
           <a href="javascript:;">
             <img src="src/image/photo3.jpg" class="layui-nav-img">
-            是奶酪啊
-
+            满天小心心
           </a>
           <dl class="layui-nav-child">
             <dd><a class="layui-btn site-demo-active" data-type="tabAdd">个人资料</a></dd>
@@ -82,25 +81,75 @@
     <div class="layui-body">
       <div class="layui-tab" lay-filter="demo" lay-allowclose="true">
         <ul class="layui-tab-title">
-
+          <li>选项1</li>
         </ul>
         <div class="layui-tab-content">
-
+          <table class="layui-table">
+            <colgroup>
+              <col width="150">
+              <col width="200">
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>地址</th>
+                <th>状态</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>小明</td>
+                <td>男</td>
+                <td>江苏省南京市</td>
+                <td>
+                  <div class="layui-input-block">
+                    <input type="checkbox" name="xxx" lay-skin="switch" lay-text="ON|OFF" checked>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>小柠</td>
+                <td>女</td>
+                <td>江苏省南京市</td>
+                <td>
+                  <div class="layui-input-block">
+                    <input type="checkbox" name="yyy" lay-skin="switch" lay-text="ON|OFF" checked>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
 
     </div>
 
     <div class="layui-footer">
-      <!-- 底部固定区域 -->
-      底部固定区域
+      <div>
+
+        &copy;欣欣荣有限公司
+      </div>
     </div>
   </div>
 
   <script src="src/layui.js"></script>
   <script>
+    layui.use(['form', 'layedit', 'laydate'], function(){
+      var form = layui.form; 
+      //监听指定开关
+      form.on('switch(switchTest)', function(data){
+          layer.msg('开关checked：'+ (this.checked ? 'true' : 'false'), {
+            offset: '6px'
+          });
+          layer.tips('温馨提示：请注意开关状态的文字可以随意定义，而不仅仅是ON|OFF', data.othis)
+      });
+    })
+
     layui.use('element', function () {
-      var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+      var element = layui.element
+      ,form = layui.form; //导航的hover效果、二级菜单等功能，需要依赖element模块
 
       //监听导航点击
       element.on('nav(demo)', function (elem) {
@@ -133,7 +182,7 @@
         }
       };
 
-
+      
 
     });
   </script>
